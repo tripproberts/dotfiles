@@ -79,13 +79,33 @@ _G.packer_plugins = {
     path = "/Users/tripproberts/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/Users/tripproberts/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/tripproberts/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/Users/tripproberts/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/Users/tripproberts/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/Users/tripproberts/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
   ["conform.nvim"] = {
-    config = { "\27LJ\2\nŸ\5\0\0\6\0 \00076\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\28\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0034\4\3\0005\5\b\0>\5\1\4=\4\t\0034\4\3\0005\5\n\0>\5\1\4=\4\v\0034\4\3\0005\5\f\0>\5\1\4=\4\r\0034\4\3\0005\5\14\0>\5\1\4=\4\15\0034\4\3\0005\5\16\0>\5\1\4=\4\17\0034\4\3\0005\5\18\0>\5\1\4=\4\19\0034\4\3\0005\5\20\0>\5\1\4=\4\21\0034\4\3\0005\5\22\0>\5\1\4=\4\23\0034\4\3\0005\5\24\0>\5\1\4=\4\25\0034\4\3\0005\5\26\0>\5\1\4=\4\27\3=\3\29\0025\3\30\0=\3\31\2B\0\2\1K\0\1\0\19format_on_save\1\0\2\17lsp_fallback\2\15timeout_ms\3ô\3\21formatters_by_ft\1\0\0\tyaml\1\3\0\0\14prettierd\rprettier\thtml\1\3\0\0\14prettierd\rprettier\bcss\1\3\0\0\14prettierd\rprettier\tjson\1\3\0\0\14prettierd\rprettier\bmdx\1\3\0\0\14prettierd\rprettier\rmarkdown\1\3\0\0\14prettierd\rprettier\20typescriptreact\1\3\0\0\14prettierd\rprettier\15typescript\1\3\0\0\14prettierd\rprettier\20javascriptreact\1\3\0\0\14prettierd\rprettier\15javascript\1\3\0\0\14prettierd\rprettier\vpython\1\3\0\0\nisort\truff\blua\1\0\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0" },
+    config = { "\27LJ\2\n°\5\0\0\6\0 \00076\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\28\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0034\4\3\0005\5\b\0>\5\1\4=\4\t\0034\4\3\0005\5\n\0>\5\1\4=\4\v\0034\4\3\0005\5\f\0>\5\1\4=\4\r\0034\4\3\0005\5\14\0>\5\1\4=\4\15\0034\4\3\0005\5\16\0>\5\1\4=\4\17\0034\4\3\0005\5\18\0>\5\1\4=\4\19\0034\4\3\0005\5\20\0>\5\1\4=\4\21\0034\4\3\0005\5\22\0>\5\1\4=\4\23\0034\4\3\0005\5\24\0>\5\1\4=\4\25\0034\4\3\0005\5\26\0>\5\1\4=\4\27\3=\3\29\0025\3\30\0=\3\31\2B\0\2\1K\0\1\0\19format_on_save\1\0\2\15timeout_ms\3ô\3\17lsp_fallback\2\21formatters_by_ft\1\0\1\20notify_on_error\1\tyaml\1\3\0\0\14prettierd\rprettier\thtml\1\3\0\0\14prettierd\rprettier\bcss\1\3\0\0\14prettierd\rprettier\tjson\1\3\0\0\14prettierd\rprettier\bmdx\1\3\0\0\14prettierd\rprettier\rmarkdown\1\3\0\0\14prettierd\rprettier\20typescriptreact\1\3\0\0\14prettierd\rprettier\15typescript\1\3\0\0\14prettierd\rprettier\20javascriptreact\1\3\0\0\14prettierd\rprettier\15javascript\1\3\0\0\14prettierd\rprettier\vpython\1\3\0\0\nisort\truff\blua\1\0\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0" },
     loaded = true,
     path = "/Users/tripproberts/.local/share/nvim/site/pack/packer/start/conform.nvim",
     url = "https://github.com/stevearc/conform.nvim"
@@ -94,6 +114,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tripproberts/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/Users/tripproberts/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
   },
   harpoon = {
     loaded = true,
@@ -169,14 +194,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: conform.nvim
-time([[Config for conform.nvim]], true)
-try_loadstring("\27LJ\2\nŸ\5\0\0\6\0 \00076\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\28\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0034\4\3\0005\5\b\0>\5\1\4=\4\t\0034\4\3\0005\5\n\0>\5\1\4=\4\v\0034\4\3\0005\5\f\0>\5\1\4=\4\r\0034\4\3\0005\5\14\0>\5\1\4=\4\15\0034\4\3\0005\5\16\0>\5\1\4=\4\17\0034\4\3\0005\5\18\0>\5\1\4=\4\19\0034\4\3\0005\5\20\0>\5\1\4=\4\21\0034\4\3\0005\5\22\0>\5\1\4=\4\23\0034\4\3\0005\5\24\0>\5\1\4=\4\25\0034\4\3\0005\5\26\0>\5\1\4=\4\27\3=\3\29\0025\3\30\0=\3\31\2B\0\2\1K\0\1\0\19format_on_save\1\0\2\17lsp_fallback\2\15timeout_ms\3ô\3\21formatters_by_ft\1\0\0\tyaml\1\3\0\0\14prettierd\rprettier\thtml\1\3\0\0\14prettierd\rprettier\bcss\1\3\0\0\14prettierd\rprettier\tjson\1\3\0\0\14prettierd\rprettier\bmdx\1\3\0\0\14prettierd\rprettier\rmarkdown\1\3\0\0\14prettierd\rprettier\20typescriptreact\1\3\0\0\14prettierd\rprettier\15typescript\1\3\0\0\14prettierd\rprettier\20javascriptreact\1\3\0\0\14prettierd\rprettier\15javascript\1\3\0\0\14prettierd\rprettier\vpython\1\3\0\0\nisort\truff\blua\1\0\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0", "config", "conform.nvim")
-time([[Config for conform.nvim]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
+-- Config for: conform.nvim
+time([[Config for conform.nvim]], true)
+try_loadstring("\27LJ\2\n°\5\0\0\6\0 \00076\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\28\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0034\4\3\0005\5\b\0>\5\1\4=\4\t\0034\4\3\0005\5\n\0>\5\1\4=\4\v\0034\4\3\0005\5\f\0>\5\1\4=\4\r\0034\4\3\0005\5\14\0>\5\1\4=\4\15\0034\4\3\0005\5\16\0>\5\1\4=\4\17\0034\4\3\0005\5\18\0>\5\1\4=\4\19\0034\4\3\0005\5\20\0>\5\1\4=\4\21\0034\4\3\0005\5\22\0>\5\1\4=\4\23\0034\4\3\0005\5\24\0>\5\1\4=\4\25\0034\4\3\0005\5\26\0>\5\1\4=\4\27\3=\3\29\0025\3\30\0=\3\31\2B\0\2\1K\0\1\0\19format_on_save\1\0\2\15timeout_ms\3ô\3\17lsp_fallback\2\21formatters_by_ft\1\0\1\20notify_on_error\1\tyaml\1\3\0\0\14prettierd\rprettier\thtml\1\3\0\0\14prettierd\rprettier\bcss\1\3\0\0\14prettierd\rprettier\tjson\1\3\0\0\14prettierd\rprettier\bmdx\1\3\0\0\14prettierd\rprettier\rmarkdown\1\3\0\0\14prettierd\rprettier\20typescriptreact\1\3\0\0\14prettierd\rprettier\15typescript\1\3\0\0\14prettierd\rprettier\20javascriptreact\1\3\0\0\14prettierd\rprettier\15javascript\1\3\0\0\14prettierd\rprettier\vpython\1\3\0\0\nisort\truff\blua\1\0\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0", "config", "conform.nvim")
+time([[Config for conform.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
