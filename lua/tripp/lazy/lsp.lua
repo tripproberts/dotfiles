@@ -23,6 +23,15 @@ return {
         });
         local cmp = require 'cmp'
         cmp.setup({
+            enabled = function()
+                local context = require("cmp.config.context")
+                local disabled = false
+                disabled = disabled or (vim.api.nvim_buf_get_option(0, "buftype") == "prompt")
+                disabled = disabled or (vim.fn.reg_recording() ~= "")
+                disabled = disabled or (vim.fn.reg_executing() ~= "")
+                disabled = disabled or context.in_treesitter_capture("comment")
+                return not disabled
+            end,
             snippet = {
                 expand = function(args)
                     require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
