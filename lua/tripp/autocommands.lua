@@ -1,5 +1,5 @@
 -- Auto save
-vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "BufWinLeave", "InsertLeave" }, {
+vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "BufWinLeave" }, {
     callback = function(args)
         if vim.bo.filetype ~= "" and vim.bo.buftype == "" then
             vim.cmd "silent! w"
