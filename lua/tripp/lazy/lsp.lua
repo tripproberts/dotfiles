@@ -14,7 +14,7 @@ return {
   config = function()
     require("mason").setup();
     require("mason-lspconfig").setup({
-      ensure_installed = { 'tsserver', 'lua_ls' },
+      ensure_installed = { 'tsserver', 'lua_ls', 'graphql' },
       handlers = {
         function(server_name)
           require("lspconfig")[server_name].setup {}
@@ -30,7 +30,7 @@ return {
               },
             },
           }
-        end
+        end,
       },
     });
     local cmp = require 'cmp'
