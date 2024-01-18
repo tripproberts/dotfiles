@@ -13,3 +13,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set("n", "<leader>b", function() vim.lsp.buf.definition() end, opts)
   end
 })
+
+function GetGitBranch()
+  local fugitive_branch = vim.fn['FugitiveHead']()
+  if fugitive_branch ~= '' then
+    return ' ' .. fugitive_branch
+  else
+    return ''
+  end
+end
+
+vim.api.nvim_set_hl(0, 'GitBranch', { fg = '#00FF00', bg = 'NONE' })
+vim.o.statusline = '%<%f  %#GitBranch#%{v:lua.GetGitBranch()}%#Normal# %h%m%r%=%-14.(%l,%c%V%) %P'
