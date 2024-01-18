@@ -5,6 +5,9 @@ return {
   },
   config = function()
     require('telescope').setup({
+      defaults = {
+        layout_strategy = "vertical",
+      },
       pickers = {
         grep_string = {
           initial_mode = "normal",
