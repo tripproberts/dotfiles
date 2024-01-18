@@ -147,6 +147,9 @@ return {
         lsp_references = {
           initial_mode = "normal",
         },
+        lsp_definitions = {
+          initial_mode = "normal",
+        },
         git_branches = {
           initial_mode = "normal",
           show_remote_tracking_branches = false,

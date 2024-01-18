@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set('n', '<leader>fr',
       function() require('telescope.builtin').lsp_references() end, opts)
-    vim.keymap.set("n", "<leader>b", function() vim.lsp.buf.definition() end, opts)
+    vim.keymap.set("n", "<leader>b", function() require('telescope.builtin').lsp_definitions() end, opts)
   end
 })
 
