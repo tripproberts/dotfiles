@@ -15,6 +15,8 @@ return {
         css = { { "prettierd", "prettier" } },
         html = { { "prettierd", "prettier" } },
         yaml = { { "prettierd", "prettier" } },
+        sh = { "shfmt" },
+        bash = { "shfmt" },
       },
       format_on_save = {
         -- These options will be passed to conform.format()

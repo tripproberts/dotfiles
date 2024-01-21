@@ -14,7 +14,7 @@ return {
   config = function()
     require("mason").setup();
     require("mason-lspconfig").setup({
-      ensure_installed = { 'tsserver', 'lua_ls', 'graphql', 'jsonls' },
+      ensure_installed = { 'tsserver', 'lua_ls', 'graphql', 'jsonls', 'bashls' },
       handlers = {
         function(server_name)
           require("lspconfig")[server_name].setup {}
