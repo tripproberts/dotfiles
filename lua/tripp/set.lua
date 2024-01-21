@@ -32,6 +32,11 @@ vim.g.mapleader = " "
 -- Load changed files on disk
 vim.o.autoread = true
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
-	command = "if mode() != 'c' | checktime | endif",
 	pattern = { "*" },
+	callback = function()
+		-- Check if the current mode is not command-line mode
+		if vim.fn.mode() ~= "c" and vim.fn.getcmdwintype() == "" then
+			vim.cmd("checktime")
+		end
+	end,
 })
