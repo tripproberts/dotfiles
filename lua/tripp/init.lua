@@ -1,7 +1,6 @@
 require("tripp.set")
 require("tripp.lazy_init")
 require("tripp.remap")
-require("tripp.autocommands")
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("TrippGroup", {}),
@@ -15,6 +14,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opts)
 		vim.keymap.set("n", "<leader>b", function()
 			require("telescope.builtin").lsp_definitions()
+		end, opts)
+		vim.keymap.set("n", "<leader>j", function()
+			vim.lsp.buf.signature_help()
 		end, opts)
 	end,
 })
