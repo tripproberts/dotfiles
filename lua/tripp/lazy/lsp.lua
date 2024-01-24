@@ -19,6 +19,13 @@ return {
 				function(server_name)
 					require("lspconfig")[server_name].setup({})
 				end,
+				["tsserver"] = function()
+					local lspconfig = require("lspconfig")
+
+					lspconfig.tsserver.setup({
+						root_dir = lspconfig.util.root_pattern(".git"),
+					})
+				end,
 				["lua_ls"] = function()
 					local lspconfig = require("lspconfig")
 					lspconfig.lua_ls.setup({
