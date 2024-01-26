@@ -14,7 +14,7 @@ return {
 	config = function()
 		require("mason").setup()
 		require("mason-lspconfig").setup({
-			ensure_installed = { "tsserver", "lua_ls", "graphql", "jsonls", "bashls" },
+			ensure_installed = { "tsserver", "lua_ls", "graphql", "jsonls", "bashls", "sqlls" },
 			handlers = {
 				function(server_name)
 					require("lspconfig")[server_name].setup({})
@@ -81,6 +81,11 @@ return {
 				{ name = "luasnip" },
 			}, {
 				{ name = "buffer" },
+			}),
+		})
+		cmp.setup.filetype("sql", {
+			sources = cmp.config.sources({
+				{ name = "vim-dadbod-completion" },
 			}),
 		})
 	end,
