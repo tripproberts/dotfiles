@@ -32,3 +32,5 @@ end
 
 vim.api.nvim_set_hl(0, "GitBranch", { fg = "#00FF00", bg = "NONE" })
 vim.o.statusline = "%<%f  %#GitBranch#%{v:lua.GetGitBranch()}%#Normal# %h%m%r%=%-14.(%l,%c%V%) %P"
+
+vim.cmd([[ highlight Visual guibg=LightGrey guifg=Black ]])
