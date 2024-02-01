@@ -31,6 +31,8 @@ vim.g.mapleader = " "
 
 vim.opt.hlsearch = true
 
+vim.opt.ignorecase = true
+
 -- Load changed files on disk
 vim.o.autoread = true
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
