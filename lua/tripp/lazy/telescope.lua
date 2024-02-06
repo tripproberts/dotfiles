@@ -145,6 +145,9 @@ return {
 				},
 			},
 			pickers = {
+				find_files = {
+					hidden = true,
+				},
 				grep_string = {
 					initial_mode = "normal",
 				},
