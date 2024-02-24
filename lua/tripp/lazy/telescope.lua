@@ -92,38 +92,6 @@ local function create_branch(bufnr)
 	end
 end
 
--- modification of telescope.actions.git_checkout which reloads the preview menu after checking out a branch
--- https://github.com/nvim-telescope/telescope.nvim/blob/9cf58f438f95f04cf1709b734bbcb9243c262d70/lua/telescope/actions/init.lua
-local function checkout_branch(bufnr)
-	local action_state = require("telescope.actions.state")
-	local utils = require("telescope.utils")
-	local cwd = action_state.get_current_picker(bufnr).cwd
-	local selection = action_state.get_selected_entry()
-	if selection == nil then
-		utils.__warn_no_selection("actions.git_checkout")
-		return
-	end
-	require("telescope.actions").close(bufnr)
-	local _, ret, stderr = utils.get_os_command_output({ "git", "checkout", selection.value }, cwd)
-	if ret == 0 then
-		utils.notify("actions.git_checkout", {
-			msg = string.format("Checked out: %s", selection.value),
-			level = "INFO",
-		})
-		vim.cmd("checktime")
-		require("telescope.builtin").git_branches()
-	else
-		utils.notify("actions.git_checkout", {
-			msg = string.format(
-				"Error when checking out: %s. Git returned: '%s'",
-				selection.value,
-				table.concat(stderr, " ")
-			),
-			level = "ERROR",
-		})
-	end
-end
-
 return {
 	"nvim-telescope/telescope.nvim",
 	dependencies = {
@@ -170,9 +138,6 @@ return {
 						n = {
 							["dd"] = function(bufnr)
 								delete_branch(bufnr)
-							end,
-							["<CR>"] = function(bufnr)
-								checkout_branch(bufnr)
 							end,
 						},
 					},
