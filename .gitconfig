@@ -1,0 +1,19 @@
+[user]
+	name = Tripp Roberts
+	email = tripp@tripp-roberts.com
+[core]
+	editor = nvim
+	excludesfile = /Users/tripproberts/.gitignore_global
+[alias]
+	st = status
+	co = checkout
+	ca = commit --amend
+	bd = branch -d
+	com = checkout main
+	cob = checkout -b
+	p = push -u origin head
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
