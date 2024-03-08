@@ -6,4 +6,7 @@ return {
 	{
 		"github/copilot.vim",
 	},
+	-- {
+	-- 	"aymericbeaumet/vim-symlink",
+	-- },
 }

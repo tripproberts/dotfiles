@@ -33,6 +33,12 @@ vim.opt.hlsearch = true
 
 vim.opt.ignorecase = true
 
+vim.keymap.set("n", "<leader>t", function()
+	vim.cmd("cd %:p:h")
+	vim.cmd("terminal")
+	vim.cmd("startinsert")
+end)
+
 vim.keymap.set("n", "K", function()
 	vim.cmd("lua vim.lsp.buf.hover()")
 end)

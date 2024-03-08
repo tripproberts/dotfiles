@@ -17,6 +17,7 @@ return {
 				sh = { "shfmt" },
 				bash = { "shfmt" },
 				go = { "gofmt" },
+				xml = { "xmllint" },
 			},
 			format_on_save = {
 				-- These options will be passed to conform.format()
