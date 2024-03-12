@@ -57,7 +57,7 @@ source $ITEM_DIR/volume.sh
 source $ITEM_DIR/battery.sh
 
 sketchybar -m --add item btc right \
-	--set btc icon='$' \
+	--set btc icon='􁑞' \
 	--set btc update_freq=20 \
 	--set btc script="~/.config/sketchybar/plugins/btc.sh"
 
