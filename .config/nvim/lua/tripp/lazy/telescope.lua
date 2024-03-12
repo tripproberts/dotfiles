@@ -57,7 +57,7 @@ local function delete_branch(bufnr)
 	end)
 end
 
--- modification of telescope.actions.git_create_branch which doesn't close the preview dialog or require confirmation
+-- modification of telescope.actions.git_create_branch which doesn't require confirmation
 -- https://github.com/nvim-telescope/telescope.nvim/blob/9cf58f438f95f04cf1709b734bbcb9243c262d70/lua/telescope/actions/init.lua
 local function create_branch(bufnr)
 	local action_state = require("telescope.actions.state")
@@ -78,7 +78,6 @@ local function create_branch(bufnr)
 				msg = string.format("Switched to a new branch: %s", new_branch),
 				level = "INFO",
 			})
-			require("telescope.builtin").git_branches()
 		else
 			utils.notify("actions.git_create_branch", {
 				msg = string.format(
